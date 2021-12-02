@@ -1,0 +1,789 @@
+{
+	"info": {
+		"_postman_id": "c5224552-7314-492d-83ce-2d47be9f7871",
+		"name": "OLX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Advertise",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Office Table\",\r\n    \"price\": 18000,\r\n    \"category\": 2,\r\n    \"description\": \"Awesome quality table\",\r\n    \"status\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Advertise",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "auth-token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Wooden Office Table\",\r\n    \"price\": 16000,\r\n    \"category\": 2,\r\n    \"description\": \"Awesome quality table\",\r\n    \"status\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/130",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All advertises",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Advertise by user post Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "auth-token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/user/130",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						"user",
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get advertise by post Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/130",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Advertise by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/116",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						"116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search advertise by filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/search/filtercriteria?searchText=Sale&dateCondition=equalsAndOnDate&onDate=2021-11-26&sortBy=higher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						"search",
+						"filtercriteria"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "Sale"
+						},
+						{
+							"key": "category",
+							"value": "Electronics",
+							"disabled": true
+						},
+						{
+							"key": "postedBy",
+							"value": "Ron",
+							"disabled": true
+						},
+						{
+							"key": "dateCondition",
+							"value": "equalsAndOnDate"
+						},
+						{
+							"key": "onDate",
+							"value": "2021-11-26"
+						},
+						{
+							"key": "fromDate",
+							"value": "2021-11-28",
+							"disabled": true
+						},
+						{
+							"key": "toDate",
+							"value": "2021-11-29",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "higher"
+						},
+						{
+							"key": "startIndex",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "records",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get advertise by search text",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "000zzz",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/advertise/search?searchText=Office",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"advertise",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "Office"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get categories",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/masterData/advertise/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"masterData",
+						"advertise",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Status",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/masterData/advertise/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"masterData",
+						"advertise",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Status By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/masterData/advertise/status/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"masterData",
+						"advertise",
+						"status",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/masterData/advertise/category/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"masterData",
+						"advertise",
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category Name by id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/masterData/advertise/category/name/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"masterData",
+						"advertise",
+						"category",
+						"name",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category Id By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/masterData/advertise/categoryId/Furniture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"masterData",
+						"advertise",
+						"categoryId",
+						"Furniture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get statusId from status name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/masterData/advertise/statusId/Open",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"masterData",
+						"advertise",
+						"statusId",
+						"Open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Siddhi\",\r\n    \"password\":\"Siddhi123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/olx/user/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Kevin\",\r\n\"lastName\": \"Macellester\",\r\n\"username\": \"kevinMac\",\r\n\"password\": \"Kevin123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/olx/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/user/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"user",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate User token by username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/user/validate/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"user",
+						"validate",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get username , firstname , lastname by authToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/olx/user/username?auth-token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"user",
+						"username"
+					],
+					"query": [
+						{
+							"key": "auth-token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Config server of Auth Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/auth-service/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"auth-service",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Config server of Masterdata Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/masterdata-service/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"masterdata-service",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Mapping from actuator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/olx-advertises/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"olx-advertises",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Config server of Advertise Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/advertise-service/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"advertise-service",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTaWRkaGkiLCJleHAiOjE2Mzg0ODM2MzMsImlhdCI6MTYzODQ0NzYzM30.DBS9ZKkIE8ImUxCIhlFjwucLoE8E-VGRDd9xI7yX9Gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9191/olx/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"olx",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
