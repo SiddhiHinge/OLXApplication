@@ -1,0 +1,15 @@
+server:
+  port: 7777
+
+spring:
+  application:
+    name: configuration-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/SiddhiHinge/olx-config.git
+          default-label: main
+          username: SiddhiHinge
+          password: Siddhi@Git30
+          clone-on-start: true
